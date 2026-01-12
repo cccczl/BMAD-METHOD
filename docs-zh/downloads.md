@@ -1,72 +1,79 @@
 ---
-title: Downloads
+title: 下载资源
 ---
 
-Download BMad Method resources for offline use, AI training, or integration.
+下载 BMad Method 资源用于离线使用、AI 训练或集成。
 
-## Source Bundles
+## 源码包
 
-| File | Description |
+| 文件 | 描述 |
 |------|-------------|
-| **[bmad-sources.zip](/downloads/bmad-sources.zip)** | Complete BMad source files |
-| **[bmad-prompts.zip](/downloads/bmad-prompts.zip)** | Agent and workflow prompts only |
+| **[bmad-sources.zip](/downloads/bmad-sources.zip)** | 完整的 BMad 源文件 |
+| **[bmad-prompts.zip](/downloads/bmad-prompts.zip)** | 仅包含智能体和流程提示 |
 
-## LLM-Optimized Files
+## LLM 优化文件
 
-These files are designed for AI consumption - perfect for loading into Claude, ChatGPT, or any LLM context window.
+这些文件专为 AI 使用设计 - 非常适合加载到 Claude、ChatGPT 或任何 LLM 上下文窗口中。
 
-| File | Description | Use Case |
+| 文件 | 描述 | 使用场景 |
 |------|-------------|----------|
-| **[llms.txt](/llms.txt)** | Documentation index with summaries | Quick overview, navigation |
-| **[llms-full.txt](/llms-full.txt)** | Complete documentation concatenated | Full context loading |
+| **[llms.txt](/llms.txt)** | 带摘要的文档索引 | 快速概览、导航 |
+| **[llms-full.txt](/llms-full.txt)** | 完整文档拼接文件 | 全上下文加载 |
 
-### Using with LLMs
+### LLM 使用方法
 
-**Claude Projects:**
+**Claude 项目:**
 ```
-Upload llms-full.txt as project knowledge
+将 llms-full.txt 作为项目知识库上传
 ```
 
 **ChatGPT:**
 ```
-Paste llms.txt for navigation, or sections from llms-full.txt as needed
+粘贴 llms.txt 用于导航，或按需使用 llms-full.txt 中的部分内容
 ```
 
-**API Usage:**
+**API 使用:**
 ```python
 import requests
 docs = requests.get("https://bmad-code-org.github.io/BMAD-METHOD/llms-full.txt").text
-# Include in your system prompt or context
+# 包含在系统提示或上下文中
 ```
 
-## Installation Options
+## 安装选项
 
-### NPM (Recommended)
+### NPM (推荐)
 
 ```bash
 npx bmad-method@alpha install
 ```
 
-## Version Information
+## 版本信息
 
-- **Current Version:** See [CHANGELOG](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/CHANGELOG.md)
-- **Release Notes:** Available on [GitHub Releases](https://github.com/bmad-code-org/BMAD-METHOD/releases)
+- **当前版本:** 参见 [更新日志](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/CHANGELOG.md)
+- **发布说明:** 在 [GitHub Releases](https://github.com/bmad-code-org/BMAD-METHOD/releases) 查看
 
-## API Access
+## API 访问
 
-For programmatic access to BMad documentation:
+通过编程方式访问 BMad 文档:
 
 ```bash
-# Get documentation index
+# 获取文档索引
 curl https://bmad-code-org.github.io/BMAD-METHOD/llms.txt
 
-# Get full documentation
+# 获取完整文档
 curl https://bmad-code-org.github.io/BMAD-METHOD/llms-full.txt
 ```
 
-## Contributing
+## 参与贡献
 
-Want to improve BMad Method? Check out:
+想要改进 BMad Method？请查看:
 
-- [Contributing Guide](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/CONTRIBUTING.md)
-- [GitHub Repository](https://github.com/bmad-code-org/BMAD-METHOD)
+- [贡献指南](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/CONTRIBUTING.md)
+- [GitHub 仓库](https://github.com/bmad-code-org/BMAD-METHOD)
+
+---
+## 术语说明
+
+- **LLM**: 大型语言模型 (Large Language Model)，如 Claude、ChatGPT 等
+- **API**: 应用程序编程接口 (Application Programming Interface)
+- **NPM**: Node 包管理器 (Node Package Manager)
