@@ -1,78 +1,77 @@
 ---
-title: "Getting Started with BMad Game Development"
-description: Build games with BMad's Game Development Module
+title: "BMad 游戏开发快速入门"
+description: "使用 BMad 的游戏开发模块构建游戏"
 ---
 
+通过人工智能驱动的工作流，使用专业的游戏开发智能体加速游戏开发，引导你完成预制作、设计、架构和实现。
 
-Build games faster using AI-powered workflows with specialized game development agents that guide you through preproduction, design, architecture, and implementation.
-
-:::note[Module Extension]
-BMGD (BMad Game Development) is a module that extends BMad Method. You'll need BMad installed first—see the [BMad v6 tutorial](/docs/tutorials/getting-started/getting-started-bmadv6.md) if you haven't installed it yet.
+:::note[模块扩展]
+BMGD (BMad Game Development) 是 BMad Method 的扩展模块。你需要先安装 BMad - 如果尚未安装，请参阅 [BMad v6 教程](/docs/tutorials/getting-started/getting-started-bmadv6.md)。
 :::
 
-## What You'll Learn
+## 你将学习到
 
-- Install and configure the BMGD module
-- Understand game development phases and specialized agents
-- Create a Game Brief and Game Design Document (GDD)
-- Progress from concept to working game code
+- 安装和配置 BMGD 模块
+- 理解游戏开发阶段和专用智能体
+- 创建游戏简报和游戏设计文档 (GDD)
+- 从概念到可运行的游戏代码
 
-:::note[Prerequisites]
-- **BMad Method installed** — Follow the main installation guide first
-- **A game idea** — Even a rough concept is enough to start
-- **AI-powered IDE** — Claude Code, Cursor, Windsurf, or similar
+:::note[先决条件]
+- **已安装 BMad Method** - 请先遵循主安装指南
+- **游戏创意** - 即使是粗略的概念也足够开始
+- **AI 驱动的 IDE** - Claude Code、Cursor、Windsurf 或类似工具
 :::
 
-:::tip[Quick Path]
-**Install** → `npx bmad-method install` (select BMGD module)
-**Preproduction** → Game Designer creates Game Brief
-**Design** → Game Designer creates GDD (and Narrative if story-driven)
-**Technical** → Game Architect creates Architecture
-**Production** → Game SM manages sprints, Game Dev implements
-**Always use fresh chats** for each workflow to avoid context issues.
+:::tip[快速路径]
+**安装** → `npx bmad-method install` (选择 BMGD 模块)
+**预制作** → 游戏设计师创建游戏简报
+**设计** → 游戏设计师创建 GDD (如果是剧情驱动游戏则创建叙事文档)
+**技术** → 游戏架构师创建架构文档
+**生产** → 游戏 Scrum Master 管理迭代，游戏开发者实现
+**始终为每个工作流使用新的聊天会话**以避免上下文问题。
 :::
 
-## Understanding BMGD
+## 理解 BMGD
 
-BMGD follows four game development phases with specialized agents for each:
+BMGD 遵循四个游戏开发阶段，每个阶段都有专用智能体：
 
-| Phase | Name          | What Happens                                                      |
-| ----- | ------------- | ----------------------------------------------------------------- |
-| 1     | Preproduction | Capture game vision, create Game Brief *(optional brainstorming)* |
-| 2     | Design        | Detail mechanics, systems, narrative in GDD                       |
-| 3     | Technical     | Plan engine, architecture, technical decisions                    |
-| 4     | Production    | Build game in sprints, story by story                             |
+| 阶段 | 名称         | 内容描述                                     |
+| ---- | ------------ | -------------------------------------------- |
+| 1    | 预制作       | 捕捉游戏愿景，创建游戏简报 (可选头脑风暴)     |
+| 2    | 设计         | 详细设计机制、系统、叙事 (在 GDD 中)          |
+| 3    | 技术         | 规划引擎、架构和技术决策                      |
+| 4    | 生产         | 逐个故事在迭代中构建游戏                     |
 
-![BMGD Workflow Overview](./images/workflow-overview.jpg)
+![BMGD 工作流概览](./images/workflow-overview.jpg)
 
-*Complete visual flowchart showing all phases, workflows, and agents for game development.*
+*完整的流程图展示游戏开发的所有阶段、工作流和智能体。*
 
-### Game Development Agents
+### 游戏开发智能体
 
-| Agent                 | When to Use                               |
-| --------------------- | ----------------------------------------- |
-| **Game Designer**     | Brainstorming, Game Brief, GDD, Narrative |
-| **Game Architect**    | Architecture, technical decisions         |
-| **Game Developer**    | Implementation, code reviews              |
-| **Game Scrum Master** | Sprint planning, story management         |
-| **Game QA**           | Test framework, test design, automation   |
-| **Game Solo Dev**     | Quick prototyping, indie development      |
+| 智能体                   | 使用场景                                   |
+| ---------------------- | ------------------------------------------ |
+| **游戏设计师**         | 头脑风暴、游戏简报、GDD、叙事设计          |
+| **游戏架构师**         | 架构设计、技术决策                          |
+| **游戏开发者**         | 实现、代码审查                             |
+| **游戏 Scrum Master** | 迭代规划、故事管理                         |
+| **游戏 QA**            | 测试框架、测试设计、自动化                 |
+| **游戏独立开发者**     | 快速原型开发、独立游戏开发                 |
 
-## Installation
+## 安装
 
-If you haven't installed BMad yet:
+如果尚未安装 BMad：
 
 ```bash
 npx bmad-method install
 ```
 
-Or add BMGD to an existing installation:
+或在现有安装中添加 BMGD：
 
 ```bash
 npx bmad-method install --add-module bmgd
 ```
 
-Verify your installation:
+验证安装：
 
 ```
 your-project/
@@ -87,116 +86,116 @@ your-project/
 └── .claude/            # IDE configuration (if using Claude Code)
 ```
 
-## Step 1: Create Your Game Brief (Preproduction)
+## 步骤 1：创建游戏简报 (预制作)
 
-Load the **Game Designer** agent in your IDE, wait for the menu, then start with your game concept.
+在 IDE 中加载 **游戏设计师** 智能体，等待菜单出现，然后从你的游戏概念开始。
 
-### Optional: Brainstorm First
+### 可选：先进行头脑风暴
 
-If you have a vague idea and want help developing it:
-
-```
-Run brainstorm-game
-```
-
-The agent guides you through game-specific ideation techniques to refine your concept.
-
-### Create the Game Brief
+如果有模糊的想法并希望得到帮助完善：
 
 ```
-Run create-game-brief
+运行 brainstorm-game
 ```
 
-The Game Designer walks you through:
-- **Game concept** — Core idea and unique selling points
-- **Design pillars** — The 3-5 principles that guide all decisions
-- **Target market** — Who plays this game?
-- **Fundamentals** — Platform, genre, scope, team size
+智能体会引导你通过特定于游戏的构思技巧来完善概念。
 
-When complete, you'll have `game-brief.md` in your `_bmad-output/` folder.
+### 创建游戏简报
 
-:::caution[Fresh Chats]
-Always start a fresh chat for each workflow. This prevents context limitations from causing issues.
+```
+运行 create-game-brief
+```
+
+游戏设计师引导你完成：
+- **游戏概念** - 核心理念和独特卖点
+- **设计支柱** - 指导所有决策的 3-5 项原则
+- **目标市场** - 谁玩这款游戏？
+- **基础要素** - 平台、类型、范围、团队规模
+
+完成后，你将在 `_bmad-output/` 文件夹中获得 `game-brief.md`。
+
+:::caution[新的聊天会话]
+始终为每个工作流开启新的聊天会话。这可以防止上下文限制导致问题。
 :::
 
-## Step 2: Design Your Game
+## 步骤 2：设计游戏
 
-With your Game Brief complete, detail your game's design.
+游戏简报完成后，详细设计你的游戏。
 
-### Create the GDD
+### 创建 GDD
 
-**Start a fresh chat** with the **Game Designer** agent.
+在 **游戏设计师** 智能体中**开启新的聊天会话**。
 
 ```
-Run create-gdd
+运行 create-gdd
 ```
 
-The agent guides you through mechanics, systems, and game-type-specific sections. BMGD offers 24 game type templates that provide genre-specific structure.
+智能体引导你完成机制、系统和特定游戏类型的部分。BMGD 提供 24 种游戏类型模板，为不同流派提供特定结构。
 
-When complete, you'll have `gdd.md` (or sharded into `gdd/` for large documents).
+完成后，你将获得 `gdd.md` (大型文档可能分片存储在 `gdd/` 目录中)。
 
-:::note[Narrative Design (Optional)]
-For story-driven games, start a fresh chat and run `narrative` to create a Narrative Design Document covering story, characters, world, and dialogue.
+:::note[叙事设计 (可选)]
+对于剧情驱动游戏，开启新的聊天会话并运行 `narrative` 创建叙事设计文档，涵盖故事、角色、世界观和对话。
 :::
 
-:::tip[Check Your Status]
-Unsure what's next? Load any agent and run `workflow-status`. It tells you the next recommended workflow.
+:::tip[查看状态]
+不确定下一步？加载任意智能体并运行 `workflow-status`。它会告诉你推荐的下一个工作流。
 :::
 
-## Step 3: Plan Your Architecture
+## 步骤 3：规划架构
 
-**Start a fresh chat** with the **Game Architect** agent.
+在 **游戏架构师** 智能体中**开启新的聊天会话**。
 
 ```
-Run create-architecture
+运行 create-architecture
 ```
 
-The architect guides you through:
-- **Engine selection** — Unity, Unreal, Godot, custom, etc.
-- **System design** — Core game systems and how they interact
-- **Technical patterns** — Architecture patterns suited to your game
-- **Structure** — Project organization and conventions
+架构师引导你完成：
+- **引擎选择** - Unity、Unreal、Godot、自定义等
+- **系统设计** - 核心游戏系统及其交互方式
+- **技术模式** - 适合游戏的架构模式
+- **结构** - 项目组织和约定
 
-When complete, you'll have `game-architecture.md`.
+完成后，你将获得 `game-architecture.md`。
 
-## Step 4: Build Your Game
+## 步骤 4：构建游戏
 
-Once planning is complete, move to production. **Each workflow should run in a fresh chat.**
+规划完成后进入生产阶段。**每个工作流都应开启新的聊天会话。**
 
-### Initialize Sprint Planning
+### 初始化迭代规划
 
-Load the **Game Scrum Master** agent and run `sprint-planning`. This creates `sprint-status.yaml` to track all epics and stories.
+加载 **游戏 Scrum Master** 智能体并运行 `sprint-planning`。这会创建 `sprint-status.yaml` 跟踪所有史诗和故事。
 
-### The Build Cycle
+### 构建周期
 
-For each story, repeat this cycle with fresh chats:
+为每个故事重复此周期（使用新的聊天会话）：
 
-| Step | Agent    | Workflow       | Purpose                            |
-| ---- | -------- | -------------- | ---------------------------------- |
-| 1    | Game SM  | `create-story` | Create story file from epic        |
-| 2    | Game Dev | `dev-story`    | Implement the story                |
-| 3    | Game QA  | `automate`     | Generate tests *(optional)*        |
-| 4    | Game Dev | `code-review`  | Quality validation *(recommended)* |
+| 步骤 | 智能体        | 工作流         | 目的                             |
+| ---- | ----------- | -------------- | -------------------------------- |
+| 1    | Game SM     | `create-story` | 从史诗创建故事文件               |
+| 2    | Game Dev    | `dev-story`    | 实现故事                         |
+| 3    | Game QA     | `automate`     | 生成测试 (可选)                  |
+| 4    | Game Dev    | `code-review`  | 质量验证 (推荐)                 |
 
-After completing all stories in an epic, load the **Game SM** and run `retrospective`.
+完成一个史诗中的所有故事后，加载 **Game SM** 并运行 `retrospective`。
 
-### Quick Prototyping Alternative
+### 快速原型替代方案
 
-For rapid iteration or indie development, load the **Game Solo Dev** agent:
-- `quick-prototype` — Rapid prototyping
-- `quick-dev` — Flexible development without full sprint structure
+用于快速迭代或独立游戏开发，加载 **游戏独立开发者** 智能体：
+- `quick-prototype` - 快速原型开发
+- `quick-dev` - 无完整迭代结构的灵活开发
 
-## What You've Accomplished
+## 已完成内容
 
-You've learned the foundation of building games with BMad:
+你已学会使用 BMad 构建游戏的基础：
 
-- Installed the BMGD module
-- Created a Game Brief capturing your vision
-- Detailed your design in a GDD
-- Planned your technical architecture
-- Understood the build cycle for implementation
+- 安装了 BMGD 模块
+- 创建了捕捉愿景的游戏简报
+- 在 GDD 中详细设计了游戏
+- 规划了技术架构
+- 理解了实现所需的构建周期
 
-Your project now has:
+你的项目现在包含：
 
 ```
 your-project/
@@ -211,50 +210,60 @@ your-project/
 └── ...
 ```
 
-## Quick Reference
+## 快速参考
 
-| Command                | Agent          | Purpose                       |
-| ---------------------- | -------------- | ----------------------------- |
-| `*brainstorm-game`     | Game Designer  | Guided game ideation          |
-| `*create-game-brief`   | Game Designer  | Create Game Brief             |
-| `*create-gdd`          | Game Designer  | Create Game Design Document   |
-| `*narrative`           | Game Designer  | Create Narrative Design       |
-| `*create-architecture` | Game Architect | Create game architecture      |
-| `*sprint-planning`     | Game SM        | Initialize sprint tracking    |
-| `*create-story`        | Game SM        | Create a story file           |
-| `*dev-story`           | Game Dev       | Implement a story             |
-| `*code-review`         | Game Dev       | Review implemented code       |
-| `*workflow-status`     | Any            | Check progress and next steps |
+| 命令                   | 智能体          | 目的                       |
+| ---------------------- | ------------- | -------------------------- |
+| `*brainstorm-game`     | 游戏设计师    | 引导式游戏构思             |
+| `*create-game-brief`   | 游戏设计师    | 创建游戏简报               |
+| `*create-gdd`          | 游戏设计师    | 创建游戏设计文档           |
+| `*narrative`           | 游戏设计师    | 创建叙事设计               |
+| `*create-architecture` | 游戏架构师    | 创建游戏架构               |
+| `*sprint-planning`     | Game SM       | 初始化迭代跟踪             |
+| `*create-story`        | Game SM       | 创建故事文件               |
+| `*dev-story`           | Game Dev      | 实现故事                   |
+| `*code-review`         | Game Dev      | 审查已实现代码             |
+| `*workflow-status`     | 任意          | 查看进度和下一步           |
 
-## Common Questions
+## 常见问题
 
-**Do I need to create all documents?**
-At minimum, create a Game Brief and GDD. Architecture is highly recommended. Narrative Design is only needed for story-driven games.
+**需要创建所有文档吗？**
+至少需要创建游戏简报和 GDD。架构文档强烈推荐。叙事设计仅适用于剧情驱动游戏。
 
-**Can I use the Game Solo Dev for everything?**
-Yes, for smaller projects or rapid prototyping. For larger games, the specialized agents provide more thorough guidance.
+**可以使用 Game Solo Dev 完成所有工作吗？**
+可以，适用于小型项目或快速原型开发。大型游戏则专用智能体提供更全面的指导。
 
-**What game types are supported?**
-BMGD includes 24 game type templates (RPG, platformer, puzzle, strategy, etc.) that provide genre-specific GDD sections.
+**支持哪些游戏类型？**
+BMGD 包含 24 种游戏类型模板 (RPG、平台游戏、解谜、策略等)，提供特定流派的 GDD 部分。
 
-**Can I change my design later?**
-Yes. Documents are living artifacts—return to update them as your vision evolves. The SM agent has `correct-course` for scope changes.
+**后期可以修改设计吗？**
+可以。文档是动态产物 - 随着愿景演变可返回更新。SM 智能体提供 `correct-course` 用于范围变更。
 
-## Getting Help
+## 获取帮助
 
-- **During workflows** — Agents guide you with questions and explanations
-- **Community** — [Discord](https://discord.gg/gk8jAdXWmj) (#bmad-method-help, #report-bugs-and-issues)
-- **Documentation** — [BMGD Workflow Reference](/docs/reference/workflows/bmgd-workflows.md)
-- **Video tutorials** — [BMad Code YouTube](https://www.youtube.com/@BMadCode)
+- **工作流期间** - 智能体通过问题和解释引导你
+- **社区** - [Discord](https://discord.gg/gk8jAdXWmj) (#bmad-method-help, #report-bugs-and-issues)
+- **文档** - [BMGD 工作流参考](/docs/reference/workflows/bmgd-workflows.md)
+- **视频教程** - [BMad Code YouTube](https://www.youtube.com/@BMadCode)
 
-## Key Takeaways
+## 关键要点
 
-:::tip[Remember These]
-- **Always use fresh chats** — Load agents in new chats for each workflow
-- **Game Brief first** — It informs everything that follows
-- **Use game type templates** — 24 templates provide genre-specific GDD structure
-- **Documents evolve** — Return to update them as your vision grows
-- **Solo Dev for speed** — Use Game Solo Dev for rapid prototyping
+:::tip[记住这些]
+- **始终使用新的聊天会话** - 每个工作流在新会话中加载智能体
+- **先完成游戏简报** - 它指导后续所有工作
+- **使用游戏类型模板** - 24 个模板提供流派特定结构
+- **文档是动态的** - 随着愿景发展返回更新
+- **Solo Dev 加速开发** - 使用游戏独立开发者进行快速原型开发
 :::
 
-Ready to start? Load the **Game Designer** agent and run `create-game-brief` to capture your game vision.
+准备好了吗？加载 **游戏设计师** 智能体并运行 `create-game-brief` 捕捉你的游戏愿景。
+
+---
+## 术语说明
+
+- **BMGD**：BMad Game Development 的缩写，BMad 的游戏开发模块
+- **GDD**：Game Design Document 的缩写，游戏设计文档
+- **Scrum Master**：敏捷开发中的迭代管理角色
+- **Sprint**：敏捷开发中的迭代周期
+- **Epic**：大型用户故事集合，通常对应一个功能模块
+- **智能体**：能独立运行的程序实体
