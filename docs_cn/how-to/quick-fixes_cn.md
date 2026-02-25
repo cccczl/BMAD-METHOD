@@ -115,7 +115,7 @@ DEV 智能体也适用于探索不熟悉的代码。在新的聊天中加载它�
 
 ## 何时升级到正式规划
 
-在以下情况下考虑使用 [Quick Flow](../explanation/quick-flow.md) 或完整的 BMad Method：
+在以下情况下考虑使用 [Quick Flow](../explanation/quick-flow_cn.md) 或完整的 BMad Method：
 
 - 更改影响多个系统或需要在许多文件中进行协调更新
 - 你不确定范围，需要规范来理清思路

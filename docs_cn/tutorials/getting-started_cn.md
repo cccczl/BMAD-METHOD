@@ -73,7 +73,7 @@ BMad 通过带有专门 AI 智能体的引导工作流帮助你构建软件。�
 | 3    | 解决方案设计   | 设计架构 *（仅限 BMad Method/Enterprise only）*         |
 | 4    | 实现           | 逐个史诗、逐个故事地构建                           |
 
-**[打开工作流地图](../reference/workflow-map.md)** 以探索阶段、工作流和上下文管理。
+**[打开工作流地图](../reference/workflow-map_cn.md)** 以探索阶段、工作流和上下文管理。
 
 根据项目的复杂性，BMad 提供三种规划路径：
 
@@ -126,7 +126,7 @@ BMad-Help 将检测你已完成的内容，并准确推荐下一步该做什么�
 :::tip[项目上下文（可选）]
 在开始之前，考虑创建 `project-context.md` 来记录你的技术偏好和实现规则。这确保所有 AI 智能体在整个项目中遵循你的约定。
 
-在 `_bmad-output/project-context.md` 手动创建它，或在架构之后使用 `/bmad-bmm-generate-project-context` 生成它。[了解更多](../explanation/project-context.md)。
+在 `_bmad-output/project-context.md` 手动创建它，或在架构之后使用 `/bmad-bmm-generate-project-context` 生成它。[了解更多](../explanation/project-context_cn.md)。
 :::
 
 ### 阶段 1：分析（可选）

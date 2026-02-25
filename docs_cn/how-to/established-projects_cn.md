@@ -44,7 +44,7 @@ sidebar:
 
 你可以查看和完善生成的文件，或者如果你更喜欢，可以在 `_bmad-output/project-context.md` 手动创建它。
 
-[了解更多关于项目上下文](../explanation/project-context.md)
+[了解更多关于项目上下文](../explanation/project-context_cn.md)
 
 ## 步骤 3：维护高质量项目文档
 
@@ -113,8 +113,8 @@ UX 工作是可选的。决定不取决于你的项目是否有 UX，而取决�
 
 ## 更多信息
 
-- **[快速修复](./quick-fixes.md)** - 错误修复和临时变更
-- **[既有项目 FAQ](../explanation/established-projects-faq.md)** - 关于在既有项目上工作的常见问题
+- **[快速修复](./quick-fixes_cn.md)** - 错误修复和临时变更
+- **[既有项目 FAQ](../explanation/established-projects-faq_cn.md)** - 关于在既有项目上工作的常见问题
 
 ---
 ## 术语说明
